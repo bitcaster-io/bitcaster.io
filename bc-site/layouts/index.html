@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-UK{{ end }}">
+    <head profile="http://www.w3.org/2005/10/profile">
+        {{ partial "head.html" . }}
+    </head>
+    <body id="page-top" class="index">
+        {{ partial "nav.html" . }}
+
+        {{ partial "header.html" . }}
+        {{ partial "carousel.html" . }}
+        {{ partial "plans.html" . }}
+        {{ partial "contact.html" . }}
+
+        {{ partial "footer.html" . }}
+        {{ partial "modals.html" . }}
+        {{ partial "js.html" . }}
+    </body>
+</html>

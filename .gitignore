@@ -1,0 +1,8 @@
+dist
+public
+*.pyc
+/.idea/
+/~*/
+/bc-site/themes/
+/bc-site/node_modules/
+/docs

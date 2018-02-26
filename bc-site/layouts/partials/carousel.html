@@ -1,0 +1,52 @@
+{{ "<!-- Carousel Section -->" | safeHTML }}
+<section id="carousel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>{{ with .Site.Params.carousel.title }}{{.}}{{end}}</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img data-src="holder.js/900x600/auto/#777:#555/text:First slide" alt="First slide"
+                             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTcwIiBoZWlnaHQ9IjUwMCI+PHJlY3Qgd2lkdGg9IjExNzAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNzc3Ii8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNTg1IiB5PSIyNTAiIHN0eWxlPSJmaWxsOiM1NTU7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6NTZweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj5GaXJzdCBzbGlkZTwvdGV4dD48L3N2Zz4=">
+                          <div class="carousel-caption">
+                              <h3>Configure a <strong>channel</strong></h3>
+                            <p>Add a nel channel an configure it</p>
+                          </div>
+                    </div>
+                    <div class="item active">
+                        <img data-src="holder.js/900x600/auto/#666:#444/text:Second slide" alt="Second slide"
+                             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTcwIiBoZWlnaHQ9IjUwMCI+PHJlY3Qgd2lkdGg9IjExNzAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNjY2Ii8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNTg1IiB5PSIyNTAiIHN0eWxlPSJmaWxsOiM0NDQ7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6NTZweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj5TZWNvbmQgc2xpZGU8L3RleHQ+PC9zdmc+">
+                          <div class="carousel-caption">
+                              <h3>Create a <strong>message</strong></h3>
+                            <p>Add a new message</p>
+                          </div>
+                    </div>
+                    <div class="item">
+                        <img data-src="holder.js/900x600/auto/#555:#333/text:Third slide" alt="Third slide"
+                             src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTcwIiBoZWlnaHQ9IjUwMCI+PHJlY3Qgd2lkdGg9IjExNzAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNTU1Ii8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNTg1IiB5PSIyNTAiIHN0eWxlPSJmaWxsOiMzMzM7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6NTZweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj5UaGlyZCBzbGlkZTwvdGV4dD48L3N2Zz4=">
+                          <div class="carousel-caption">
+                              <h3>Create an <strong>event</strong></h3>
+                            <p>Create an event and send it to the channel</p>
+                          </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
