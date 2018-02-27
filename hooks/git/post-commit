@@ -1,0 +1,30 @@
+#!/bin/bash
+
+exec 1>&2
+
+REPO_DIR=$(git rev-parse --show-toplevel)
+INFOFILE=`realpath ${REPO_DIR}/gitinfo.js`
+
+HOOK_ERROR=0
+BRANCH=`git symbolic-ref -q --short HEAD || git describe --tags --exact-match`
+HOOK_ERROR=$(($HOOK_ERROR+$?))
+HASH=`git log -1 --pretty=format:"%H"`
+HOOK_ERROR=$(($HOOK_ERROR+$?))
+COMMITTER=`git log -1 --pretty=format:"%cN"`
+HOOK_ERROR=$(($HOOK_ERROR+$?))
+COMMITTER_EMAIL=`git log -1 --pretty=format:"%ce"`
+HOOK_ERROR=$(($HOOK_ERROR+$?))
+DATE=`git log -1 --pretty=format:"%ai"`
+HOOK_ERROR=$(($HOOK_ERROR+$?))
+SUBJECT=`git log -1 --pretty=format:"%s" | sed "s/\"/'/g"`
+HOOK_ERROR=$(($HOOK_ERROR+$?))
+
+echo "module.exports={\"branch\":\"$BRANCH\",\"email\":\"$COMMITTER_EMAIL\",\"committer\":\"$COMMITTER\",\"subject\":\"$SUBJECT\",\"commit_date\":\"$DATE\",\"hash\":\"$HASH\"}" > $INFOFILE
+HOOK_ERROR=$(($HOOK_ERROR+$?))
+
+if [ $HOOK_ERROR -gt 0 ];then
+    echo "Failed to generate git info file at $INFOFILE"
+    exit 1
+else
+    echo "git info file generated at $INFOFILE"
+fi
