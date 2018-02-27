@@ -12,6 +12,7 @@ if [ $? -eq 0 ]; then
   rm -rf ../docs_obsolete
   mv ../docs/index.html ../docs/demo.html
   cp content/demo.html ../docs/index.html
+  cp ${BASEDIR}/gitinfo.js ../docs
 else
   echo "failed to create site"
   if [ $REVERT != 0 ];then

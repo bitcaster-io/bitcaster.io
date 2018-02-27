@@ -4,8 +4,29 @@
         <link rel="icon"
           type="image/png"
           href="{{ .Site.BaseURL }}/img/logopic.png">
+        <style>
+        .content {
+            max-width: 1024px;
+            margin: auto;
+            text-align: center;
+        }
+        .holder {
+          width: auto;
+          display: inline-block;
+        }
+
+        .holder img {
+          width: 100%; /* Will shrink image to 30% of its original width */
+          height: auto;
+        }​
+
+        </style>
     </head>
-    <body id="page-top" class="index">
-        We're coming!
+
+    <body id="page-top" class="content">
+        <div class="holder">
+            <img src="{{ .Site.BaseURL }}/img/logo.png">
+        </div>
+        <h2>We're coming!</h2>
     </body>
 </html>
